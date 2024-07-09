@@ -1,0 +1,226 @@
+.body{
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('./images/cartoon-cloud-sky-background-2-cover.jpg');
+  background-size: cover;
+  background-position: center; 
+  color: white;
+  margin: 0;
+  height: 100vh;
+}
+
+.container{
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  top: 1vh;
+  background: linear-gradient(135deg, #1e2a4a 0%, #111d3a 100%);
+  border-radius: 30px;
+}
+
+.c1{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.cc1{
+  display: flex;
+  flex-direction: column;
+}
+
+.current-weather{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.forecast{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: center;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  z-index: 1;
+  margin: 0 auto;
+  width: 65vw;
+}
+
+.weather-analysis{
+  display: flex;
+  align-items: center;
+}
+
+.city , .date{
+  margin: 0;
+}
+.city{
+  margin-bottom: 15px;
+}
+.temperature{
+  display: flex;
+  align-items:flex-end;
+}
+.weather-details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  top: 3vh;
+  left: 0.5vw;
+}
+
+.p{
+  position: relative;
+  left: 2vw;
+}
+.icon{
+  margin-right: 5px;
+}
+
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+.search {
+  background-color: rgb(33, 41, 81);
+  padding: 10px;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 15px;
+  width: 200px; 
+}
+
+.searchbutton {
+  padding: 10px;
+  color: rgb(33, 41, 81);
+  cursor: pointer;
+  background-color: white;
+  border-radius: 15px;
+  border: none;
+  position: relative;
+  right: 3vw;
+}
+
+.search::placeholder {
+  color: rgb(115, 120, 158);
+  padding-left: 5px;
+}
+
+
+.degree{
+  font-size: 100px;
+  font-weight:500;
+}
+
+.location{
+  color: #111d3a;
+  background-color: white;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+@media (min-width: 768px) {
+  .c1 , .current-weather {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .weather-analysis {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .temperature {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .forecast {
+    flex-wrap: nowrap;
+  }
+
+  .list {
+    margin: 10px;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .container, .body{
+    height: auto;
+    max-width: 150%;
+  }
+}
+
+
+@media (min-width: 500px) and (max-width: 700px) {
+  .body{
+    height: 100vh;
+    max-width: 1500px;
+  }
+  .container{
+    width: 95vw;
+    height: 90vh;
+  }
+  .c1  {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 4vw;
+    padding-right: 2vw;
+  }
+
+  .current-weather {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .searchbutton{
+    position: relative;
+    right:8vw;
+  }
+  .search{
+    width: 170px;
+  }
+  .date{
+    flex-wrap: wrap;
+  }
+  
+  .location{
+    position: relative;
+    right: 5vw;
+  }
+
+  .weather-analysis {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .temperature {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .forecast {
+    flex-wrap: wrap;
+  }
+
+  .list {
+    margin: 10px;
+  }
+}
